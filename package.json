@@ -24,6 +24,9 @@
   },
   "homepage": "https://github.com/sakoh/redux-api-async-middleware#readme",
   "dependencies": {
-    "@types/axios": "^0.14.0"
+    "@types/axios": "^0.14.0",
+    "@types/redux": "^3.6.0",
+    "axios": "^0.17.1",
+    "redux": "^3.7.2"
   }
 }
