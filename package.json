@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/sakoh/redux-api-async-middleware/issues"
   },
-  "homepage": "https://github.com/sakoh/redux-api-async-middleware#readme"
+  "homepage": "https://github.com/sakoh/redux-api-async-middleware#readme",
+  "dependencies": {
+    "@types/axios": "^0.14.0"
+  }
 }
