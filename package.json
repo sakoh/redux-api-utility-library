@@ -1,0 +1,26 @@
+{
+  "name": "redux-api-async-middleware",
+  "version": "1.0.0",
+  "description": "A middleware async actions between React, Redux and the API",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sakoh/redux-api-async-middleware.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "api",
+    "middleware",
+    "async"
+  ],
+  "author": "Sako Hartounian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sakoh/redux-api-async-middleware/issues"
+  },
+  "homepage": "https://github.com/sakoh/redux-api-async-middleware#readme"
+}
