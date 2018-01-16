@@ -1,4 +1,4 @@
-import axios, { AxiosRequestConfig, AxiosPromise } from 'axios'
+import { AxiosRequestConfig, AxiosPromise } from 'axios'
 import { ActionCreator } from 'redux'
 
 export interface SimpleAction {
@@ -22,9 +22,12 @@ export interface ErrorAction extends SimpleAction {
 export interface RequestAction extends SimpleAction {
   readonly payload: {
     readonly requestBody: AxiosRequestConfig,
-    readonly actionCreators: {
-      dataAction: ActionCreator<DataAction>,
-      failureAction: ActionCreator<ErrorAction>
+    readonly actionTypes: {
+      success: string
+      failure: string
     }
+    readonly errorMessage: string
   }
 }
+
+export type Action = SimpleAction | DataAction | RequestAction | ErrorAction
