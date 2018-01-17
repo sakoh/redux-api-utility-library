@@ -1,7 +1,7 @@
 {
-  "name": "redux-api-async-middleware",
+  "name": "redux-api-utility-library",
   "version": "1.0.0",
-  "description": "A middleware async actions between React, Redux and the API",
+  "description": "A utility library for handling API Requests and Async Actions with Redux",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest --coverage"
