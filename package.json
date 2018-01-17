@@ -36,12 +36,13 @@
     "typescript": "^2.6.2"
   },
   "jest": {
+    "verbose": true,
     "testPathIgnorePatterns": [
-      "./node_modules/",
-      "./dist/"
+      "/node_modules/",
+      "/dist/"
     ],
     "transform": {
-      "^.+\\.tsx?$": "./node_modules/ts-jest/preprocessor.js"
+      "^.+\\.ts?$": "./node_modules/ts-jest/preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
