@@ -4,7 +4,7 @@
   "description": "A middleware async actions between React, Redux and the API",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "./node_modules/.bin/jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -25,9 +25,29 @@
   "homepage": "https://github.com/sakoh/redux-api-async-middleware#readme",
   "dependencies": {
     "axios": "^0.17.1",
-    "redux": "^3.7.2"
+    "jest": "^22.1.1",
+    "redux": "^3.7.2",
+    "ts-jest": "^22.0.1",
+    "typescript": "^2.6.2"
   },
   "devDependencies": {
     "tslint-config-dollarshaveclub": "^1.0.2"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/dist/"
+    ],
+    "transform": {
+      "^.+\\.tsx?$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json"
+    ]
   }
 }

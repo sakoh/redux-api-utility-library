@@ -1,12 +1,32 @@
 {
   "compilerOptions": {
-    "module": "system", 
-    "lib": [ "es2015" ],
-    "outFile": "dist/index.js"
+    "baseUrl": "src",
+    "outFile": "./dist/",
+    "module": "commonjs",
+    "target": "es5",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "paths": {
+      "src/*": [ "./src/*" ]
+    },
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true
   },
-  "extends": "tslint-config-dollarshaveclub/react",
-  "rules": {
-    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }]
-  }
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "**/*/__tests__/*",
+  ],
+  "types": [
+    "typePatches"
+  ]
 }
-  
