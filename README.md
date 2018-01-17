@@ -1,2 +1,2 @@
 # redux-api-async-middleware
-A middleware for handling asynchronous API calls with Redux
+A utility library for handling API Requests and Async Actions with Redux
