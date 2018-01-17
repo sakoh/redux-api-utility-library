@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "baseUrl": "src",
-    "outFile": "./dist/",
     "module": "commonjs",
     "target": "es5",
     "lib": ["es6", "dom"],
@@ -9,6 +8,7 @@
     "allowJs": true,
     "moduleResolution": "node",
     "rootDir": "src",
+    "outDir": "dist",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,

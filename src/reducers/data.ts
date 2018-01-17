@@ -1,4 +1,4 @@
-import { ActionTypes, Action, DataAction } from '../models'
+import { ActionTypes, DataAction } from '../models'
 import { createActionTypeFromKey } from '../utils'
 
 export const createDataReducer = (key: string) => (state: object = {}, action: DataAction): object => {
