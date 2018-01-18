@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest --coverage",
-    "lint": "node_modules/.bin/tslint -p .",
+    "lint": "npm run tslint; npm run eslint",
+    "tslint": "node_modules/.bin/tslint -p .",
+    "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/js",
     "build": "./node_modules/.bin/tsc",
     "webpack": "./node_modules/.bin/webpack --config examples/webpack.config.js",
     "server": "./node_modules/.bin/http-server examples"
@@ -36,6 +38,9 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "eslint": "^4.15.0",
+    "eslint-config-dollarshaveclub": "^3.0.4",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "jest": "^22.1.1",
     "react": "^15.6.2",
     "react-dom": "^16.2.0",
