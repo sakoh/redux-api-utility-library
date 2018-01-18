@@ -7,6 +7,13 @@ export enum ActionTypes {
   ERROR = 'ERROR',
 }
 
+export enum Methods {
+  GET = 'GET',
+  POST = 'POST',
+  PUT = 'PUT',
+  DELETE = 'DELETE',
+}
+
 export interface RequestError {
   readonly message: string
 }

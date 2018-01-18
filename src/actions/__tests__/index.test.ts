@@ -1,13 +1,13 @@
 import { AxiosRequestConfig } from 'axios'
 import { sendRequest } from '..'
-import { RequestAction } from '../../models'
+import { RequestAction, Methods } from '../../models'
 
 describe('actions', () => {
   describe('sendRequest', () => {
     it('should create a RequestAction', () => {
       const key = 'hello'
       const axiosRequestConfig: AxiosRequestConfig = {
-        method: 'Get',
+        method: Methods.GET,
         baseURL: 'www.example.com',
         url: '/hello',
       }
