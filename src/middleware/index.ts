@@ -4,7 +4,7 @@ import {
   SimpleAction,
   DataAction,
   RequestAction,
-  ErrorAction,
+  ErrorAction
 } from '../models'
 
 export const apiMiddleware = (axiosInstance: AxiosInstance = axios) => (next: Function) => async (action: Action) => {
