@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 import { Router, Route, browserHistory } from 'react-router'
@@ -18,13 +17,11 @@ const store = createStore(
   combineReducers({
     users: usersReducer,
     posts: postsReducer,
-    routing: routerReducer
-  },
+    routing: routerReducer,
+  }),
   applyMiddleware([
     apiMiddleware,
   ]),
-),
-
 )
 
 // Create an enhanced history that syncs navigation events with the store
@@ -34,9 +31,9 @@ export default () => (
   <Provider store={store}>
     { /* Tell the Router to use our enhanced history */ }
     <Router history={history}>
-      <Route path='/' exact component={Home} /> 
-      <Route path='users' exact component={Users}/>
-      <Route path='posts' exact component={Posts}/>
+      <Route path='/' exact component={Home} />
+      <Route path='users' exact component={Users} />
+      <Route path='posts' exact component={Posts} />
     </Router>
   </Provider>
 )
