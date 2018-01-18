@@ -12,12 +12,12 @@ describe('actions', () => {
         url: '/hello',
       }
       const expectedResult: RequestAction = {
-        type: `REDUX_API_MIDDLEWARE_${key.toUpperCase()}_REQUEST`,
+        type: `REDUX_API_UTILITY_LIBRARY_${key.toUpperCase()}_REQUEST`,
         payload: {
           axiosRequestConfig,
           actionTypes: {
-            success: `REDUX_API_MIDDLEWARE_${key.toUpperCase()}_DATA`,
-            failure: `REDUX_API_MIDDLEWARE_${key.toUpperCase()}_ERROR`,
+            success: `REDUX_API_UTILITY_LIBRARY_${key.toUpperCase()}_DATA`,
+            failure: `REDUX_API_UTILITY_LIBRARY_${key.toUpperCase()}_ERROR`,
           },
           errorMessage: 'There has been a server request error',
         },
