@@ -5,9 +5,7 @@ import { createErrorReducer } from './error'
 import { createLoadingReducer } from './loading'
 
 export const createRequestReducer = (key: string): RequestReducer => combineReducers({
-  [key]: combineReducers({
-    data: createDataReducer(key),
-    error: createErrorReducer(key),
-    loading: createLoadingReducer(key),
-  }),
+  data: createDataReducer(key),
+  error: createErrorReducer(key),
+  loading: createLoadingReducer(key),
 })

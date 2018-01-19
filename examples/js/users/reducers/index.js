@@ -1,3 +1,3 @@
-import { createRequestReducer } from '../../../../'
+// import { createRequestReducer } from '../../../../'
 
-export default createRequestReducer('users')
+// export default createRequestReducer('users')
