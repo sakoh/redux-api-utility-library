@@ -3,15 +3,13 @@ node_js:
   - "node"
 install:
   - npm i
-env: 
-  - "BROWSER"
-  - "TEST"
+before scripts:
+  - npm run server
 script:
   - npm test
   - npm run lint
   - npm run build
   - npm run webpack
-  - npm run server --only-group $BROWSER
-  - npm run cypress --only-group $TEST
+  - npm run cypress
 after_success:
   - bash <(curl -s https://codecov.io/bash)
