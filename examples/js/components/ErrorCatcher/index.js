@@ -8,21 +8,29 @@ export class ErrorCatcher extends Component {
 
   constructor (props) {
     super(props)
-    this.state = { hasError: false }
+    this.state = {
+      hasError: false,
+      errorMessage: '',
+    }
   }
 
   componentDidCatch (error, info) {
     // Display fallback UI
-    this.setState({ hasError: true })
-    // You can also log the error to an error reporting service
-    global.console.log(error, info)
+    this.setState({
+      hasError: true,
+      errorMessage: `${error} ${info}`,
+    })
   }
 
   render () {
     if (this.state.hasError) {
       // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>
+      return (
+        <p>{this.state.errorMessage}</p>
+      )
     }
-    return this.props.children
+    return (
+      <div>{this.props.children}</div>
+    )
   }
 }
