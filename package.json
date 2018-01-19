@@ -10,7 +10,8 @@
     "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/js",
     "build": "./node_modules/.bin/tsc",
     "webpack": "./node_modules/.bin/webpack --watch --config examples/webpack.config.js",
-    "server": "./node_modules/.bin/http-server examples"
+    "server": "./node_modules/.bin/http-server examples",
+    "cypress": "./node_modules/.bin/cypress open"
   },
   "repository": {
     "type": "git",
