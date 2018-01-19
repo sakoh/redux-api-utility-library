@@ -9,10 +9,9 @@
     "tslint": "node_modules/.bin/tslint -p .",
     "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/js",
     "build": "./node_modules/.bin/tsc",
-    "browser": "./node_modules/.bin/npm-run-all --parallel browser:*",
-    "browser:webpack": "./node_modules/.bin/webpack --config examples/webpack.config.js",
-    "browser:server": "./node_modules/.bin/http-server examples",
-    "browser:cypress": "./node_modules/.bin/cypress run"
+    "webpack": "./node_modules/.bin/webpack --config examples/webpack.config.js",
+    "server": "./node_modules/.bin/http-server examples",
+    "cypress": "./node_modules/.bin/cypress run"
   },
   "repository": {
     "type": "git",
