@@ -12,6 +12,7 @@
     "webpack": "./node_modules/.bin/webpack --watch --config examples/webpack.config.js",
     "server": "./node_modules/.bin/http-server examples",
     "cypress": "./node_modules/.bin/cypress open"
+    "docker": "docker run --cap-add=ALL --net=host \ -it bahmutov/cypress-image:node-6-xvfb-chrome \ chrome --headless --disable-gpu http://123.123.123.123:2345"
   },
   "repository": {
     "type": "git",
