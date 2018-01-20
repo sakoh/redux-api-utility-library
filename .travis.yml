@@ -3,8 +3,12 @@ node_js:
   - "node"
 install:
   - npm i
-before scripts:
-  - npm run server
+before_script:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - sleep 3 # give xvfb some time to start
+  - npm run server  # start a Web server
+  - sleep 3 # give Web server some time to bind to sockets, etc
 script:
   - npm test
   - npm run lint
