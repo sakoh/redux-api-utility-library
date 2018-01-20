@@ -11,7 +11,7 @@
     "build": "./node_modules/.bin/tsc",
     "webpack": "./node_modules/.bin/webpack --config examples/webpack.config.js",
     "server": "./node_modules/.bin/http-server examples",
-    "cypress": "./node_modules/.bin/cypress run"
+    "cypress": "./node_modules/.bin/cypress run --record"
   },
   "repository": {
     "type": "git",
