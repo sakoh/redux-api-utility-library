@@ -1,13 +1,13 @@
-import { createIsInProgressReducer } from '../isInProgress'
+import { createLoadingReducer } from '../loading'
 import { ActionTypes, DataAction, ErrorAction } from '../../models'
 import { createActionTypeFromKey } from '../../utils'
 
-describe('createReducer/isInProgress', () => {
+describe('createReducer/loading', () => {
   it('should return state by default', () => {
     const action = {
       type: 'hello whatever',
     }
-    const result = createIsInProgressReducer('hello')(false, action)
+    const result = createLoadingReducer('hello')(false, action)
 
     expect(result).toBe(false)
   })
@@ -16,7 +16,7 @@ describe('createReducer/isInProgress', () => {
     const action = {
       type: createActionTypeFromKey('hello', ActionTypes.REQUEST),
     }
-    const result = createIsInProgressReducer('hello')(null, action)
+    const result = createLoadingReducer('hello')(null, action)
 
     expect(result).toBe(true)
   })
@@ -31,7 +31,7 @@ describe('createReducer/isInProgress', () => {
         data,
       },
     }
-    const result = createIsInProgressReducer('hello')(null, action)
+    const result = createLoadingReducer('hello')(null, action)
 
     expect(result).toEqual(false)
   })
@@ -46,7 +46,7 @@ describe('createReducer/isInProgress', () => {
         error,
       },
     }
-    const result = createIsInProgressReducer('hello')(null, action)
+    const result = createLoadingReducer('hello')(null, action)
 
     expect(result).toEqual(false)
   })

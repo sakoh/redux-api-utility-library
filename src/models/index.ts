@@ -7,6 +7,13 @@ export enum ActionTypes {
   ERROR = 'ERROR',
 }
 
+export enum Methods {
+  GET = 'GET',
+  POST = 'POST',
+  PUT = 'PUT',
+  DELETE = 'DELETE',
+}
+
 export interface RequestError {
   readonly message: string
 }
@@ -25,17 +32,14 @@ export interface DataAction extends SimpleAction {
 
 export interface ErrorAction extends SimpleAction {
   readonly payload: {
-    readonly error: RequestError,
+    readonly error: RequestErrorOrNull,
   }
 }
 
 export interface RequestAction extends SimpleAction {
   readonly payload: {
     readonly axiosRequestConfig: AxiosRequestConfig,
-    readonly actionTypes: {
-      success: string
-      failure: string,
-    }
+    readonly key: string,
     readonly errorMessage: string,
   }
 }
