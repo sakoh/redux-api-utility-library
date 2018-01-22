@@ -39,10 +39,7 @@ export interface ErrorAction extends SimpleAction {
 export interface RequestAction extends SimpleAction {
   readonly payload: {
     readonly axiosRequestConfig: AxiosRequestConfig,
-    readonly actionTypes: {
-      success: string
-      failure: string,
-    }
+    readonly key: string,
     readonly errorMessage: string,
   }
 }
