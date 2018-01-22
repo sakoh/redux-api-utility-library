@@ -32,7 +32,7 @@ export interface DataAction extends SimpleAction {
 
 export interface ErrorAction extends SimpleAction {
   readonly payload: {
-    readonly error: RequestError,
+    readonly error: RequestErrorOrNull,
   }
 }
 

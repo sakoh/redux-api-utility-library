@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { apiMiddleware } from '..'
-import { sendRequest } from '../../actions'
+import { createRequestAction } from '../../actions'
 import { createActionTypeFromKey } from '../../utils'
 import { ActionTypes } from '../../models'
 
@@ -17,7 +17,7 @@ describe('apiMiddleware', () => {
     const { data } = await axios.get('https://jsonplaceholder.typicode.com/users')
 
     await apiMiddleware()(next)(
-      sendRequest('users', {
+      createRequestAction('users', {
         method: 'GET',
         url: '/users',
         baseURL: 'https://jsonplaceholder.typicode.com',
@@ -36,7 +36,7 @@ describe('apiMiddleware', () => {
     const next = jest.fn()
 
     await apiMiddleware()(next)(
-      sendRequest('users', {
+      createRequestAction('users', {
         method: 'GET',
         url: '/users',
         baseURL: 'https://doesntexistbs.com',

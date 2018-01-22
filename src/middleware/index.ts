@@ -2,17 +2,16 @@ import { Action } from 'redux'
 import axios, { AxiosResponse, AxiosInstance } from 'axios'
 import {
   SimpleAction,
-  DataAction,
   RequestAction,
-  ErrorAction,
 } from '../models'
+import { createErrorAction, createDataAction } from '../actions'
 
 export const apiMiddleware = (axiosInstance: AxiosInstance = axios) => (next: Function) => async (action: Action) => {
   const requestAction = action as RequestAction
   const notRequestAction =
     !requestAction.payload ||
     !requestAction.payload.axiosRequestConfig ||
-    !requestAction.payload.actionTypes ||
+    !requestAction.payload.key ||
     !requestAction.payload.errorMessage
 
   if (notRequestAction) {
@@ -20,7 +19,7 @@ export const apiMiddleware = (axiosInstance: AxiosInstance = axios) => (next: Fu
   }
 
   const { type, payload } = requestAction
-  const { axiosRequestConfig, actionTypes, errorMessage } = payload
+  const { axiosRequestConfig, key, errorMessage } = payload
 
   next({ type } as SimpleAction)
 
@@ -28,30 +27,15 @@ export const apiMiddleware = (axiosInstance: AxiosInstance = axios) => (next: Fu
     const response: AxiosResponse = await axiosInstance.request(axiosRequestConfig)
 
     if (response.status > 200) {
-      next({
-        type: actionTypes.failure,
-        payload: {
-          error: {
-            message: errorMessage,
-          },
-        },
-      } as ErrorAction)
+      next(createErrorAction(key, {
+        message: errorMessage,
+      }))
     }
 
-    next({
-      type: actionTypes.success,
-      payload: {
-        data: response.data,
-      },
-    } as DataAction)
+    next(createDataAction(key, response.data))
   } catch (e) {
-    next({
-      type: actionTypes.failure,
-      payload: {
-        error: {
-          message: errorMessage,
-        },
-      },
-    } as ErrorAction)
+    next(createErrorAction(key, {
+      message: errorMessage,
+    }))
   }
 }
