@@ -6,19 +6,27 @@ import {
 } from '../models'
 import { createErrorAction, createDataAction } from '../actions'
 
-export const apiMiddleware = (axiosInstance: AxiosInstance = axios) => (next: Function) => async (action: Action) => {
-  const requestAction = action as RequestAction
-  const notRequestAction =
-    !requestAction.payload ||
-    !requestAction.payload.axiosRequestConfig ||
-    !requestAction.payload.key ||
-    !requestAction.payload.errorMessage
+const notRequestAction = (action: RequestAction) =>
+  !action.payload
+  || action.payload === undefined
+  || action.payload === null
+  || !action.payload.axiosRequestConfig
+  || action.payload.axiosRequestConfig === undefined
+  || action.payload.axiosRequestConfig === null
+  || !action.payload.key
+  || !action.payload.key === undefined
+  || !action.payload.key === null
+  || !action.payload.errorMessage
+  || action.payload.errorMessage === undefined
+  || action.payload.errorMessage === null
 
-  if (notRequestAction) {
+export const apiMiddleware = (axiosInstance: AxiosInstance = axios) => (next: Function) => async (action: Action) => {
+
+  if (notRequestAction(action as RequestAction)) {
     return next(action)
   }
 
-  const { type, payload } = requestAction
+  const { type, payload } = action as RequestAction
   const { axiosRequestConfig, key, errorMessage } = payload
 
   next({ type } as SimpleAction)
