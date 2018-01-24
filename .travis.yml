@@ -14,6 +14,7 @@ script:
   - npm run lint
   - npm run build
   - cd examples/users
+  - npm i
   - npm run server & npm run cypress
 after_success:
   - bash <(curl -s https://codecov.io/bash)
