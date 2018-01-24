@@ -13,7 +13,7 @@ script:
   - npm test
   - npm run lint
   - npm run build
-  - npm run webpack
+  - cd examples/users
   - npm run server & npm run cypress
 after_success:
   - bash <(curl -s https://codecov.io/bash)
