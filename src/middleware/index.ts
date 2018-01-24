@@ -1,48 +1,32 @@
-import { Action } from 'redux'
+import { Action, Dispatch } from 'redux'
 import axios, { AxiosResponse, AxiosInstance } from 'axios'
-import {
-  SimpleAction,
-  RequestAction,
-} from '../models'
+import { RequestAction } from '../models'
 import { createErrorAction, createDataAction } from '../actions'
 
-const notRequestAction = (action: RequestAction) =>
-  !action.payload
-  || action.payload === undefined
-  || action.payload === null
-  || !action.payload.axiosRequestConfig
-  || action.payload.axiosRequestConfig === undefined
-  || action.payload.axiosRequestConfig === null
-  || !action.payload.key
-  || !action.payload.key === undefined
-  || !action.payload.key === null
-  || !action.payload.errorMessage
-  || action.payload.errorMessage === undefined
-  || action.payload.errorMessage === null
+export const apiMiddleware = (store: Object = {}, api: AxiosInstance = axios) => (next: Dispatch<Action>) => async (action: Action) => {
+  const notRequestAction = !(action as RequestAction).payload || !(action as RequestAction).payload.axiosRequestConfig || !(action as RequestAction).payload.key
 
-export const apiMiddleware = (axiosInstance: AxiosInstance = axios) => (next: Function) => async (action: Action) => {
-
-  if (notRequestAction(action as RequestAction)) {
+  if (notRequestAction) {
     return next(action)
   }
 
   const { type, payload } = action as RequestAction
   const { axiosRequestConfig, key, errorMessage } = payload
 
-  next({ type } as SimpleAction)
+  next({ type })
 
   try {
-    const response: AxiosResponse = await axiosInstance.request(axiosRequestConfig)
+    const response: AxiosResponse = await api.request(axiosRequestConfig)
 
     if (response.status > 200) {
-      next(createErrorAction(key, {
+      return next(createErrorAction(key, {
         message: errorMessage,
       }))
     }
 
-    next(createDataAction(key, response.data))
+    return next(createDataAction(key, response.data))
   } catch (e) {
-    next(createErrorAction(key, {
+    return next(createErrorAction(key, {
       message: errorMessage,
     }))
   }
