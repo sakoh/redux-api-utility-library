@@ -70,7 +70,9 @@
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
-      "tsx"
+      "tsx",
+      "js",
+      "jsx"
     ]
   }
 }
