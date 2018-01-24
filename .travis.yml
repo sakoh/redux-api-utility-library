@@ -3,6 +3,7 @@ node_js:
   - "node"
 install:
   - npm i
+  - (cd examples/users; npm i)
 # before_script:
 #   - "export DISPLAY=:99.0"
 #   - "sh -e /etc/init.d/xvfb start"
@@ -14,7 +15,6 @@ script:
   - npm run lint
   - npm run build
   - cd examples/users
-  - npm i
-  - npm run server & npm run cypress
+  - npm start & npm run cypress
 after_success:
   - bash <(curl -s https://codecov.io/bash)
