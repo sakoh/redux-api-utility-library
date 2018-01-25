@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { createRequestAction } from 'redux-api-utility-library'
 import Header from '../../components/Header'
 
 class Posts extends Component {
@@ -14,4 +15,13 @@ class Posts extends Component {
   }
 }
 
-export default Posts
+const mapStateToProps = ({ users }) => users
+const mapDispatchToProps = dispatch => dispatch(
+  createRequestAction('posts', {
+    method: 'GET',
+    url: '/posts',
+    baseURL: 'https://jsonplaceholder.typicode.com',
+  })
+)
+
+export default connect(mapStateToProps, mapDispatchToProps)(Users)

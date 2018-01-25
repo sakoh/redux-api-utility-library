@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "axios": "^0.17.1",
     "cypress": "^1.4.1",
     "eslint": "^4.16.0",
     "history": "^4.7.2",
@@ -12,7 +13,8 @@
     "react-redux": "^5.0.6",
     "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "1.1.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-api-utility-library": "file:.."
   },
   "scripts": {
     "start": "react-scripts start",
