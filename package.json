@@ -7,11 +7,8 @@
     "test": "./node_modules/.bin/jest --coverage",
     "lint": "npm run tslint; npm run eslint",
     "tslint": "node_modules/.bin/tslint -p .",
-    "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/js",
-    "build": "./node_modules/.bin/tsc",
-    "webpack": "./node_modules/.bin/webpack --config examples/webpack.config.js",
-    "server": "./node_modules/.bin/http-server examples",
-    "cypress": "./node_modules/.bin/cypress run --record"
+    "eslint": "node_modules/.bin/eslint -c 'examples/users/.eslintrc.js' examples/users/src",
+    "build": "./node_modules/.bin/tsc"
   },
   "repository": {
     "type": "git",
@@ -32,19 +29,29 @@
   "homepage": "https://github.com/sakoh/redux-api-async-middleware#readme",
   "dependencies": {
     "axios": "^0.17.1",
+    "eslint-plugin-cypress-dev": "^1.1.2",
     "http-server": "^0.11.1",
     "redux": "^3.7.2"
   },
   "devDependencies": {
+    "@ljharb/eslint-config": "^12.2.1",
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
-    "cypress": "^1.4.1",
-    "eslint": "^4.15.0",
+    "eslint": "^4.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
     "eslint-config-dollarshaveclub": "^3.0.4",
+    "eslint-config-logux": "^18.0.0",
+    "eslint-config-postcss": "^2.0.2",
+    "eslint-plugin-ember": "^4.6.2",
+    "eslint-plugin-es5": "^1.2.0",
+    "eslint-plugin-jest": "^21.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-mocha": "^4.11.0",
+    "eslint-plugin-security": "^1.4.0",
     "history": "^4.7.2",
     "jest": "^22.1.3",
     "navalia": "^1.2.0",
@@ -76,8 +83,7 @@
       "ts",
       "tsx",
       "js",
-      "jsx",
-      "json"
+      "jsx"
     ]
   }
 }
