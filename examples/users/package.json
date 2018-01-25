@@ -5,9 +5,14 @@
   "dependencies": {
     "cypress": "^1.4.1",
     "eslint": "^4.16.0",
+    "history": "^4.7.2",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.0"
+    "react-redux": "^5.0.6",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "1.1.0",
+    "redux": "^3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
