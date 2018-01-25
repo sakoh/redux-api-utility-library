@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Header from '../Header'
 
-class Home extends Component {
+class Users extends Component {
   render () {
     return (
       <div>
@@ -14,4 +14,4 @@ class Home extends Component {
   }
 }
 
-export default Home
+export default Users

@@ -11,3 +11,10 @@ describe('UsersPage', () => {
       .get('h1.App-title').should('contain', 'List of Users')
   })
 })
+
+describe('PostsPage', () => {
+  it('should have content on the front page', () => {
+    cy.visit('/posts')
+      .get('h1.App-title').should('contain', 'List of Posts')
+  })
+})

@@ -11,8 +11,9 @@ import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-r
 
 import reducers from './reducers' // Or wherever you keep your reducers
 import App from './components/App'
-import Home from './components/Home'
-import Users from './components/Users'
+import Home from './pages/Home'
+import Users from './pages/Users'
+import Posts from './pages/Posts'
 
 // Create a history of your choosing (we're using a browser history in this case)
 const history = createHistory()
@@ -41,6 +42,7 @@ ReactDOM.render(
         <div>
           <Route exact path='/' component={Home} />
           <Route exact path='/users' component={Users} />
+          <Route exact path='/posts' component={Posts} />
         </div>
       </ConnectedRouter>
     </Provider>
