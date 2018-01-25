@@ -31,6 +31,11 @@ const store = createStore(
     ...reducers,
     router: routerReducer,
   }),
+  {
+    users: null,
+    posts: null,
+    router: null,
+  },
   composeEnhancers(
     applyMiddleware(
       historyMiddleware,
