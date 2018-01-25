@@ -1,5 +1,5 @@
 import { Action, Dispatch } from 'redux'
-import axios, { AxiosResponse, AxiosInstance } from 'axios'
+import axios, { AxiosResponse } from 'axios'
 import { RequestAction } from '../models'
 import { createErrorAction, createDataAction } from '../actions'
 
