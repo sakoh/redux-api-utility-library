@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import { createRequestAction } from 'redux-api-utility-library'
 import Header from '../../components/Header'
 
@@ -24,4 +25,4 @@ const mapDispatchToProps = dispatch => dispatch(
   })
 )
 
-export default connect(mapStateToProps, mapDispatchToProps)(Users)
+export default connect(mapStateToProps, mapDispatchToProps)(Posts)
