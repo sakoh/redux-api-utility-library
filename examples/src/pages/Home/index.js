@@ -9,6 +9,9 @@ class Home extends Component {
         <p className='App-intro'>
           visit <a href='/users'>Users</a>
         </p>
+        <p className='App-intro'>
+          visit <a href='/posts'>Posts</a>
+        </p>
       </div>
     )
   }

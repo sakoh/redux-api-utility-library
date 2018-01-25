@@ -1,13 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { createStore, combineReducers, applyMiddleware } from 'redux'
+import { compose, createStore, combineReducers, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
 
 import createHistory from 'history/createBrowserHistory'
 import { Route } from 'react-router'
 
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
+import { apiMiddleware } from 'redux-api-utility-library/dist/middleware'
 
 import reducers from './reducers' // Or wherever you keep your reducers
 import App from './components/App'
@@ -19,7 +20,9 @@ import Posts from './pages/Posts'
 const history = createHistory()
 
 // Build the middleware for intercepting and dispatching navigation actions
-const middleware = routerMiddleware(history)
+const historyMiddleware = routerMiddleware(history)
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 
 // Add the reducer to your store on the `router` key
 // Also apply our middleware for navigating
@@ -28,7 +31,12 @@ const store = createStore(
     ...reducers,
     router: routerReducer,
   }),
-  applyMiddleware(middleware)
+  composeEnhancers(
+    applyMiddleware(
+      historyMiddleware,
+      apiMiddleware,
+    )
+  )
 )
 
 // Now you can dispatch navigation actions from anywhere!

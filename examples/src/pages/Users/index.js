@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createRequestAction } from 'redux-api-utility-library'
+import { createRequestAction } from 'redux-api-utility-library/dist/actions'
 import Header from '../../components/Header'
 
 class Users extends Component {
