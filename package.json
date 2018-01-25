@@ -7,7 +7,7 @@
     "test": "./node_modules/.bin/jest --coverage",
     "lint": "npm run tslint; npm run eslint",
     "tslint": "node_modules/.bin/tslint -p .",
-    "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/js",
+    "eslint": "node_modules/.bin/eslint -c 'examples/users/.eslintrc.js' examples/users",
     "build": "./node_modules/.bin/tsc"
   },
   "repository": {
