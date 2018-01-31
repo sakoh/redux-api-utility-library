@@ -1,4 +1,12 @@
+import { combineReducers } from 'redux'
+import { routerReducer as router } from 'react-router-redux'
 import { createRequestReducer } from 'redux-api-utility-library/dist/reducers'
 
-export const users = createRequestReducer('users')
-export const posts = createRequestReducer('posts')
+const users = createRequestReducer('users')
+const posts = createRequestReducer('posts')
+
+export default combineReducers({
+  posts,
+  router,
+  users,
+})
