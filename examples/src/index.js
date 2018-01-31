@@ -7,10 +7,10 @@ import { Provider } from 'react-redux'
 import createHistory from 'history/createBrowserHistory'
 import { Route } from 'react-router'
 
-import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux'
+import { ConnectedRouter, routerReducer as router, routerMiddleware } from 'react-router-redux'
 import { apiMiddleware } from 'redux-api-utility-library/dist/middleware'
 
-import reducers from './reducers' // Or wherever you keep your reducers
+import { posts, users } from './reducers' // Or wherever you keep your reducers
 import App from './components/App'
 import Home from './pages/Home'
 import Users from './pages/Users'
@@ -28,12 +28,21 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
 // Also apply our middleware for navigating
 const store = createStore(
   combineReducers({
-    ...reducers,
-    router: routerReducer,
+    posts,
+    router,
+    users,
   }),
   {
-    users: null,
-    posts: null,
+    users: {
+      data: [],
+      error: null,
+      loading: false,
+    },
+    posts: {
+      data: [],
+      error: null,
+      loading: false,
+    },
     router: null,
   },
   composeEnhancers(
