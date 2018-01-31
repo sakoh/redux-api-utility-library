@@ -14,19 +14,17 @@ class Users extends Component {
     await this.props.getUsers()
   }
 
-  render () {
-    return (
-      <div>
-        <Header>List of Users</Header>
-        <ul>
-          {this.props.users.map(user => <li key={user.id}>{user.name}</li>)}
-        </ul>
-        <p className='App-intro'>
-          Return <a href='/'>Home</a>
-        </p>
-      </div>
-    )
-  }
+  render = () => (
+    <div>
+      <Header>List of Users</Header>
+      <ul>
+        {this.props.users.map(user => <li key={user.id}>{user.name}</li>)}
+      </ul>
+      <p className='App-intro'>
+        Return <a href='/'>Home</a>
+      </p>
+    </div>
+  )
 }
 
 const mapStateToProps = (state) => ({ users: state.users.data })

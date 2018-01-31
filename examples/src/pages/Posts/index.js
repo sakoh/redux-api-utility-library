@@ -14,17 +14,15 @@ class Posts extends Component {
     await this.props.getPosts()
   }
 
-  render () {
-    return (
-      <div>
-        <Header>List of Posts</Header>
-        <ul>{this.props.posts.map(post => <li key={post.id}>{post.title}</li>)}</ul>
-        <p className='App-intro'>
-          Return <a href='/'>Home</a>
-        </p>
-      </div>
-    )
-  }
+  render = () => (
+    <div>
+      <Header>List of Posts</Header>
+      <ul>{this.props.posts.map(post => <li key={post.id}>{post.title}</li>)}</ul>
+      <p className='App-intro'>
+        Return <a href='/'>Home</a>
+      </p>
+    </div>
+  )
 }
 
 const mapStateToProps = (state) => ({ posts: state.posts.data })
