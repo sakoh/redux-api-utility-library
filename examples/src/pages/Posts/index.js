@@ -10,22 +10,28 @@ class Posts extends Component {
     posts: PropTypes.object,
   }
 
-  async componentWillMount () {
-    await this.props.getPosts()
+  componentWillMount () {
+    this.props.getPosts()
   }
 
-  render = () => (
-    <div>
-      <Header>List of Posts</Header>
-      <ul>{this.props.posts.map(post => <li key={post.id}>{post.title}</li>)}</ul>
-      <p className='App-intro'>
-        Return <a href='/'>Home</a>
-      </p>
-    </div>
-  )
+  render () {
+    const { loading, data } = this.props.posts
+
+    if (loading) return <div>...loading</div>
+
+    return (
+      <div>
+        <Header>List of Posts</Header>
+        <ul>{data.map(post => <li key={post.id}>{post.title}</li>)}</ul>
+        <p className='App-intro'>
+          Return <a href='/'>Home</a>
+        </p>
+      </div>
+    )
+  }
 }
 
-const mapStateToProps = (state) => ({ posts: state.posts.data })
+const mapStateToProps = ({ posts }) => ({ posts })
 const mapDispatchToProps = dispatch => ({
   getPosts () {
     dispatch(

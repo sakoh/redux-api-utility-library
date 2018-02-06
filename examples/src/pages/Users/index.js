@@ -10,24 +10,30 @@ class Users extends Component {
     users: PropTypes.object,
   }
 
-  async componentWillMount () {
-    await this.props.getUsers()
+  componentWillMount () {
+    this.props.getUsers()
   }
 
-  render = () => (
-    <div>
-      <Header>List of Users</Header>
-      <ul>
-        {this.props.users.map(user => <li key={user.id}>{user.name}</li>)}
-      </ul>
-      <p className='App-intro'>
-        Return <a href='/'>Home</a>
-      </p>
-    </div>
-  )
+  render = () => {
+    const { loading, data } = this.props.users
+
+    if (loading) return <div>...loading</div>
+
+    return (
+      <div>
+        <Header>List of Users</Header>
+        <ul>
+          {data.map(user => <li key={user.id}>{user.name}</li>)}
+        </ul>
+        <p className='App-intro'>
+          Return <a href='/'>Home</a>
+        </p>
+      </div>
+    )
+  }
 }
 
-const mapStateToProps = (state) => ({ users: state.users.data })
+const mapStateToProps = ({ users }) => ({ users })
 const mapDispatchToProps = dispatch => ({
   getUsers () {
     dispatch(
