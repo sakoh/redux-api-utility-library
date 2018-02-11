@@ -10,7 +10,7 @@
     "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/src",
     "docs": "node_modules/.bin/typedoc --out ./docs ./src/*/index.ts",
     "build": "node_modules/.bin/tsc",
-    "prepublishOnly": "npm run build"
+    "preinstall": "npm run build"
   },
   "repository": {
     "type": "git",
