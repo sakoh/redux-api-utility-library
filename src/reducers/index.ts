@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux'
-import { RequestReducer } from '../models'
+import { RequestReducer } from '../types'
 import { createDataReducer } from './data'
 import { createErrorReducer } from './error'
 import { createLoadingReducer } from './loading'

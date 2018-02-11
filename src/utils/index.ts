@@ -1,4 +1,4 @@
-import { ActionTypes } from '../models'
+import { ActionTypes } from '../types'
 
 /**
  * A function creates an action type namespaced by the `key` param to avoid collisions with other action types.

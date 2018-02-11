@@ -1,5 +1,5 @@
 import { createErrorReducer } from '../error'
-import { ErrorAction, ActionTypes } from '../../models'
+import { ErrorAction, ActionTypes } from '../../types'
 import { createActionTypeFromKey } from '../../utils'
 
 describe('createReducer/error', () => {

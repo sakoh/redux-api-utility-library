@@ -1,4 +1,4 @@
-import { ActionTypes, DataAction } from '../models'
+import { ActionTypes, DataAction } from '../types'
 import { createActionTypeFromKey } from '../utils'
 
 /**

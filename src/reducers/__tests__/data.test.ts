@@ -1,6 +1,6 @@
 import { createDataReducer } from '../data'
 import { createActionTypeFromKey } from '../../utils'
-import { DataAction, ActionTypes } from '../../models/'
+import { DataAction, ActionTypes } from '../../types/'
 
 describe('createReducer/data', () => {
   it('should return state by default', () => {

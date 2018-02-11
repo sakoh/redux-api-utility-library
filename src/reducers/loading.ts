@@ -1,5 +1,5 @@
 import { Action } from 'redux'
-import { ActionTypes } from '../models'
+import { ActionTypes } from '../types'
 import { createActionTypeFromKey } from '../utils'
 
 /**

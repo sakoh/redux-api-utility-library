@@ -1,4 +1,7 @@
-import { ActionTypes, RequestErrorOrNull, ErrorAction } from '../models'
+import { ActionTypes,
+  RequestErrorOrNull,
+  ErrorAction,
+} from '../types'
 import { createActionTypeFromKey } from '../utils'
 
 /**

@@ -1,5 +1,11 @@
 import { AxiosRequestConfig } from 'axios'
-import { RequestAction, ActionTypes, DataAction, RequestError, ErrorAction } from '../models'
+import {
+  RequestAction,
+  ActionTypes,
+  DataAction,
+  RequestError,
+  ErrorAction,
+} from '../types'
 import { createActionTypeFromKey } from '../utils'
 
 /**
