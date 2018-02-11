@@ -2,7 +2,7 @@ import axios from 'axios'
 import { apiMiddleware } from '..'
 import { createRequestAction } from '../../actions'
 import { createActionTypeFromKey } from '../../utils'
-import { ActionTypes } from '../../models'
+import { ActionTypes } from '../../types'
 
 describe('apiMiddleware', () => {
   it('should dispatch simple request action', async () => {
