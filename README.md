@@ -20,20 +20,21 @@ Now there is a reducer created fully equipped to deal with all the standard acti
 ## Middleware
 
 ```js
+import { apiMiddleware } from 'redux-api-utility-library/dist/middleware'
+
 const store = createStore(
   users: createRequestReducer('users'),
   {},
-  applyMiddleware(
-    historyMiddleware,
-    apiMiddleware,
-  )
+  applyMiddleware(apiMiddleware),
 )
 ```
 
 ## Action creators
 
 ```js
-createRequestAction('users', {
+import { createRequestAction } from 'redux-api-utility-library/dist/actions'
+
+const action = createRequestAction('users', {
   method: 'GET',
   url: '/users',
   baseURL: 'https://jsonplaceholder.typicode.com',
@@ -41,11 +42,3 @@ createRequestAction('users', {
 ```
 
 this action when dispatched get handled by the `apiMiddleware` makes the network requests equivalent to the keys passed in as the second argument.
-
-## Utils
-
-```js
-createActionTypeFromKey('foo', ActionTypes.REQUEST) //returns the unique action type of `REDUX_API_UTILITY_LIBRARY_FOO_REQUEST`
-```
-
-This functions only accepts an enum of ActionTypes as the second parameter.
