@@ -3,4 +3,6 @@
 [![codecov](https://codecov.io/gh/sakoh/redux-api-utility-library/branch/master/graph/badge.svg)](https://codecov.io/gh/sakoh/redux-api-utility-library)
 
 
-A utility library for handling API Requests and Async Actions with Redux
+Redux API Utility Library (RAUL) is a library of higher order reducers, an API middleware, TypeScript data types,
+and other utility functions to make building a Redux Application involving asynchronous calls to RESTful APIs
+more simple.
