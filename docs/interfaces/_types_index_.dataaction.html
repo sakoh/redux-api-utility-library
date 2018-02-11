@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>RequestAction | redux-api-utility-library</title>
+	<title>DataAction | redux-api-utility-library</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,13 +56,13 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="../modules/_models_index_.html">&quot;models/index&quot;</a>
+					<a href="../modules/_types_index_.html">&quot;types/index&quot;</a>
 				</li>
 				<li>
-					<a href="_models_index_.requestaction.html">RequestAction</a>
+					<a href="_types_index_.dataaction.html">DataAction</a>
 				</li>
 			</ul>
-			<h1>Interface RequestAction</h1>
+			<h1>Interface DataAction</h1>
 		</div>
 	</div>
 </header>
@@ -72,8 +72,8 @@
 			<section class="tsd-panel tsd-comment">
 				<div class="tsd-comment tsd-typography">
 					<div class="lead">
-						<p>An action that is received by the <code>apiMiddleware</code> to make network request to an API server,
-						while at the same time is dispatched to the reducers to set the Redux application in a loading state.</p>
+						<p>An action that changes a value in the Redux Store based on a payload of data received from
+						a successful network request.</p>
 					</div>
 				</div>
 			</section>
@@ -84,7 +84,7 @@
 						<span class="tsd-signature-type">Action</span>
 						<ul class="tsd-hierarchy">
 							<li>
-								<span class="target">RequestAction</span>
+								<span class="target">DataAction</span>
 							</li>
 						</ul>
 					</li>
@@ -97,8 +97,8 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_models_index_.requestaction.html#payload" class="tsd-kind-icon">payload</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_models_index_.requestaction.html#type" class="tsd-kind-icon">type</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_types_index_.dataaction.html#payload" class="tsd-kind-icon">payload</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="_types_index_.dataaction.html#type" class="tsd-kind-icon">type</a></li>
 							</ul>
 						</section>
 					</div>
@@ -112,20 +112,14 @@
 					<div class="tsd-signature tsd-kind-icon">payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sakoh/redux-api-utility-library/blob/5c9d20c/src/models/index.ts#L77">models/index.ts:77</a></li>
+							<li>Defined in <a href="https://github.com/sakoh/redux-api-utility-library/blob/b9548c5/src/types/index.ts#L58">types/index.ts:58</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
 						<h4>Type declaration</h4>
 						<ul class="tsd-parameters">
 							<li class="tsd-parameter">
-								<h5>axios<wbr>Request<wbr>Config<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">AxiosRequestConfig</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>error<wbr>Message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
-							</li>
-							<li class="tsd-parameter">
-								<h5>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></h5>
+								<h5>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span></h5>
 							</li>
 						</ul>
 					</div>
@@ -158,11 +152,11 @@
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_middleware_index_.html">"middleware/index"</a>
 					</li>
-					<li class="current tsd-kind-external-module">
-						<a href="../modules/_models_index_.html">"models/index"</a>
-					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_reducers_index_.html">"reducers/index"</a>
+					</li>
+					<li class="current tsd-kind-external-module">
+						<a href="../modules/_types_index_.html">"types/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
 						<a href="../modules/_utils_index_.html">"utils/index"</a>
@@ -184,40 +178,40 @@
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="../enums/_models_index_.actiontypes.html" class="tsd-kind-icon">Action<wbr>Types</a>
+						<a href="../enums/_types_index_.actiontypes.html" class="tsd-kind-icon">Action<wbr>Types</a>
 					</li>
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="../enums/_models_index_.methods.html" class="tsd-kind-icon">Methods</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_models_index_.dataaction.html" class="tsd-kind-icon">Data<wbr>Action</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_models_index_.erroraction.html" class="tsd-kind-icon">Error<wbr>Action</a>
+						<a href="../enums/_types_index_.methods.html" class="tsd-kind-icon">Methods</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_models_index_.requestaction.html" class="tsd-kind-icon">Request<wbr>Action</a>
+						<a href="_types_index_.dataaction.html" class="tsd-kind-icon">Data<wbr>Action</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="_models_index_.requestaction.html#payload" class="tsd-kind-icon">payload</a>
+								<a href="_types_index_.dataaction.html#payload" class="tsd-kind-icon">payload</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="_models_index_.requestaction.html#type" class="tsd-kind-icon">type</a>
+								<a href="_types_index_.dataaction.html#type" class="tsd-kind-icon">type</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="_models_index_.requesterror.html" class="tsd-kind-icon">Request<wbr>Error</a>
+						<a href="_types_index_.erroraction.html" class="tsd-kind-icon">Error<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_index_.requestaction.html" class="tsd-kind-icon">Request<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
+						<a href="_types_index_.requesterror.html" class="tsd-kind-icon">Request<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_models_index_.html#requesterrorornull" class="tsd-kind-icon">Request<wbr>Error<wbr>OrNull</a>
+						<a href="../modules/_types_index_.html#requesterrorornull" class="tsd-kind-icon">Request<wbr>Error<wbr>OrNull</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="../modules/_models_index_.html#requestreducer" class="tsd-kind-icon">Request<wbr>Reducer</a>
+						<a href="../modules/_types_index_.html#requestreducer" class="tsd-kind-icon">Request<wbr>Reducer</a>
 					</li>
 				</ul>
 			</nav>

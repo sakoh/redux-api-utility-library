@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>&quot;models/index&quot; | redux-api-utility-library</title>
+	<title>ActionTypes | redux-api-utility-library</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -56,75 +56,91 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="_models_index_.html">&quot;models/index&quot;</a>
+					<a href="../modules/_types_index_.html">&quot;types/index&quot;</a>
+				</li>
+				<li>
+					<a href="_types_index_.actiontypes.html">ActionTypes</a>
 				</li>
 			</ul>
-			<h1>External module &quot;models/index&quot;</h1>
+			<h1>Enumeration ActionTypes</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
 		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p><code>An enum contains the three values that are related to three standard types of actions
+that a Redux application typically handles during a network request. These actions (</code>REQUEST<code>,</code>DATA<code>,
+and</code>ERROR`) relate respectively to the loading stage, the success call of an API endpoint, and an unsuccessful
+						call of an API endpoint.</p>
+					</div>
+				</div>
+			</section>
 			<section class="tsd-panel-group tsd-index-group">
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
 						<section class="tsd-index-section ">
-							<h3>Enumerations</h3>
+							<h3>Enumeration members</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-enum tsd-parent-kind-external-module"><a href="../enums/_models_index_.actiontypes.html" class="tsd-kind-icon">Action<wbr>Types</a></li>
-								<li class="tsd-kind-enum tsd-parent-kind-external-module"><a href="../enums/_models_index_.methods.html" class="tsd-kind-icon">Methods</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Interfaces</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_models_index_.dataaction.html" class="tsd-kind-icon">Data<wbr>Action</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_models_index_.erroraction.html" class="tsd-kind-icon">Error<wbr>Action</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_models_index_.requestaction.html" class="tsd-kind-icon">Request<wbr>Action</a></li>
-								<li class="tsd-kind-interface tsd-parent-kind-external-module"><a href="../interfaces/_models_index_.requesterror.html" class="tsd-kind-icon">Request<wbr>Error</a></li>
-							</ul>
-						</section>
-						<section class="tsd-index-section ">
-							<h3>Type aliases</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_models_index_.html#requesterrorornull" class="tsd-kind-icon">Request<wbr>Error<wbr>OrNull</a></li>
-								<li class="tsd-kind-type-alias tsd-parent-kind-external-module"><a href="_models_index_.html#requestreducer" class="tsd-kind-icon">Request<wbr>Reducer</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_types_index_.actiontypes.html#data" class="tsd-kind-icon">DATA</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_types_index_.actiontypes.html#error" class="tsd-kind-icon">ERROR</a></li>
+								<li class="tsd-kind-enum-member tsd-parent-kind-enum"><a href="_types_index_.actiontypes.html#request" class="tsd-kind-icon">REQUEST</a></li>
 							</ul>
 						</section>
 					</div>
 				</section>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="requesterrorornull" class="tsd-anchor"></a>
-					<h3>Request<wbr>Error<wbr>OrNull</h3>
-					<div class="tsd-signature tsd-kind-icon">Request<wbr>Error<wbr>OrNull<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_models_index_.requesterror.html" class="tsd-signature-type">RequestError</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">null</span></div>
+				<h2>Enumeration members</h2>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="data" class="tsd-anchor"></a>
+					<h3>DATA</h3>
+					<div class="tsd-signature tsd-kind-icon">DATA<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;DATA&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sakoh/redux-api-utility-library/blob/5c9d20c/src/models/index.ts#L51">models/index.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/sakoh/redux-api-utility-library/blob/b9548c5/src/types/index.ts#L21">types/index.ts:21</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>a union type between <code>RequestError</code> and <code>null</code>.</p>
+							<p>the standard action type that is dispatched to the reducers to set to an object in the Redux
+							store to a payload received as a result of a successful network request.</p>
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-external-module">
-					<a name="requestreducer" class="tsd-anchor"></a>
-					<h3>Request<wbr>Reducer</h3>
-					<div class="tsd-signature tsd-kind-icon">Request<wbr>Reducer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Reducer</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="error" class="tsd-anchor"></a>
+					<h3>ERROR</h3>
+					<div class="tsd-signature tsd-kind-icon">ERROR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;ERROR&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/sakoh/redux-api-utility-library/blob/5c9d20c/src/models/index.ts#L87">models/index.ts:87</a></li>
+							<li>Defined in <a href="https://github.com/sakoh/redux-api-utility-library/blob/b9548c5/src/types/index.ts#L27">types/index.ts:27</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A type of reducer that handles all the standard types of actions that dispatched by the <code>apiMiddleware</code>.</p>
+							<p>the standard action type that is dispatched to the reducers to set to an object in the Redux
+							store to an error message received as a result of a failed network request.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-enum-member tsd-parent-kind-enum">
+					<a name="request" class="tsd-anchor"></a>
+					<h3>REQUEST</h3>
+					<div class="tsd-signature tsd-kind-icon">REQUEST<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol"> =&nbsp;&quot;REQUEST&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/sakoh/redux-api-utility-library/blob/b9548c5/src/types/index.ts#L15">types/index.ts:15</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>the standard action type that is dispatched to the Redux store to set the application in a loading state
+							when network request that is in process.</p>
 						</div>
 					</div>
 				</section>
@@ -140,59 +156,74 @@
 						<span>Internals</span>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_actions_index_.html">"actions/index"</a>
+						<a href="../modules/_actions_index_.html">"actions/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_middleware_index_.html">"middleware/index"</a>
+						<a href="../modules/_middleware_index_.html">"middleware/index"</a>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="../modules/_reducers_index_.html">"reducers/index"</a>
 					</li>
 					<li class="current tsd-kind-external-module">
-						<a href="_models_index_.html">"models/index"</a>
+						<a href="../modules/_types_index_.html">"types/index"</a>
 					</li>
 					<li class=" tsd-kind-external-module">
-						<a href="_reducers_index_.html">"reducers/index"</a>
-					</li>
-					<li class=" tsd-kind-external-module">
-						<a href="_utils_index_.html">"utils/index"</a>
+						<a href="../modules/_utils_index_.html">"utils/index"</a>
 					</li>
 					<li class="label tsd-is-external">
 						<span>Externals</span>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_reducers_data_.html">"reducers/data"</a>
+						<a href="../modules/_reducers_data_.html">"reducers/data"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_reducers_error_.html">"reducers/error"</a>
+						<a href="../modules/_reducers_error_.html">"reducers/error"</a>
 					</li>
 					<li class=" tsd-kind-external-module tsd-is-external">
-						<a href="_reducers_loading_.html">"reducers/loading"</a>
+						<a href="../modules/_reducers_loading_.html">"reducers/loading"</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-enum tsd-parent-kind-external-module">
+						<a href="_types_index_.actiontypes.html" class="tsd-kind-icon">Action<wbr>Types</a>
+						<ul>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_types_index_.actiontypes.html#data" class="tsd-kind-icon">DATA</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_types_index_.actiontypes.html#error" class="tsd-kind-icon">ERROR</a>
+							</li>
+							<li class=" tsd-kind-enum-member tsd-parent-kind-enum">
+								<a href="_types_index_.actiontypes.html#request" class="tsd-kind-icon">REQUEST</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="../enums/_models_index_.actiontypes.html" class="tsd-kind-icon">Action<wbr>Types</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-parent-kind-external-module">
-						<a href="../enums/_models_index_.methods.html" class="tsd-kind-icon">Methods</a>
+						<a href="_types_index_.methods.html" class="tsd-kind-icon">Methods</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_models_index_.dataaction.html" class="tsd-kind-icon">Data<wbr>Action</a>
+						<a href="../interfaces/_types_index_.dataaction.html" class="tsd-kind-icon">Data<wbr>Action</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_models_index_.erroraction.html" class="tsd-kind-icon">Error<wbr>Action</a>
+						<a href="../interfaces/_types_index_.erroraction.html" class="tsd-kind-icon">Error<wbr>Action</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_models_index_.requestaction.html" class="tsd-kind-icon">Request<wbr>Action</a>
+						<a href="../interfaces/_types_index_.requestaction.html" class="tsd-kind-icon">Request<wbr>Action</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-external-module">
-						<a href="../interfaces/_models_index_.requesterror.html" class="tsd-kind-icon">Request<wbr>Error</a>
+						<a href="../interfaces/_types_index_.requesterror.html" class="tsd-kind-icon">Request<wbr>Error</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_models_index_.html#requesterrorornull" class="tsd-kind-icon">Request<wbr>Error<wbr>OrNull</a>
+						<a href="../modules/_types_index_.html#requesterrorornull" class="tsd-kind-icon">Request<wbr>Error<wbr>OrNull</a>
 					</li>
 					<li class=" tsd-kind-type-alias tsd-parent-kind-external-module">
-						<a href="_models_index_.html#requestreducer" class="tsd-kind-icon">Request<wbr>Reducer</a>
+						<a href="../modules/_types_index_.html#requestreducer" class="tsd-kind-icon">Request<wbr>Reducer</a>
 					</li>
 				</ul>
 			</nav>
