@@ -1,5 +1,8 @@
 import { createLoadingReducer } from '../loading'
-import { ActionTypes, DataAction, ErrorAction } from '../../models'
+import { ActionTypes,
+  DataAction,
+  ErrorAction,
+} from '../../types'
 import { createActionTypeFromKey } from '../../utils'
 
 describe('createReducer/loading', () => {

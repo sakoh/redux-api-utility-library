@@ -1,8 +1,16 @@
 import { Action, Dispatch } from 'redux'
 import axios, { AxiosResponse } from 'axios'
-import { RequestAction } from '../models'
+import { RequestAction } from '../types'
 import { createErrorAction, createDataAction } from '../actions'
 
+/**
+ * A middleware that handles server requests, processing and changing actions according to the keys in its
+ * payload and sending them to the reducers. If the action has a payload with the keys of `key` or
+ * `axiosRequestConfig`, it will be proccessed as a `RequestAction`, where it calls a RESTful API and returns
+ * either a `DataAction` if it successfully resolves the network request, or a `ErrorAction` if the network
+ * request fails.
+ * @param store the Redux Store that hooks into the middleware.
+ */
 export const apiMiddleware = (store: Object = {}) => (next: Dispatch<Action>) => async (action: Action) => {
   const notRequestAction = !(action as RequestAction).payload || !(action as RequestAction).payload.axiosRequestConfig || !(action as RequestAction).payload.key
 

@@ -9,7 +9,7 @@ import {
   Methods,
   DataAction,
   ErrorAction,
- } from '../../models'
+ } from '../../types'
 
 describe('actions', () => {
   describe('createRequestAction', () => {
