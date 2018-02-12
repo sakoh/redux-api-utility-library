@@ -59,3 +59,7 @@ typings/
 
 # output
 dist
+
+# cypress
+examples/cypress/screenshots/
+examples/cypress/videos/
