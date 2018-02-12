@@ -23,5 +23,6 @@ script:
     api_key: NPM_AUTH_TOKEN
     on:
       branch: master
+
 after_success:
   - bash <(curl -s https://codecov.io/bash)
