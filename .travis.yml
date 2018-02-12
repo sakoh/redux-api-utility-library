@@ -17,12 +17,12 @@ script:
   - cd examples
   - npm start & npm run cypress
 
-  deploy:
-    provider: npm
-    email: PUBLISHER_EMAIL
-    api_key: NPM_AUTH_TOKEN
-    on:
-      branch: master
+deploy:
+  provider: npm
+  email: PUBLISHER_EMAIL
+  api_key: NPM_AUTH_TOKEN
+  on:
+    branch: master
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
