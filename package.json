@@ -4,11 +4,13 @@
   "description": "A utility library for handling API Requests and Async Actions with Redux",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
-    "lint": "tslint -p .",
-    "docs": "typedoc --out ./docs ./src/*/index.ts; touch docs/.nojekyll",
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "test": "./node_modules/.bin/jest --coverage",
+    "lint": "npm run tslint; npm run eslint",
+    "tslint": "node_modules/.bin/tslint -p .",
+    "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/src",
+    "docs": "node_modules/.bin/typedoc --out ./docs ./src/*/index.ts; touch docs/.nojekyll",
+    "build": "node_modules/.bin/tsc",
+    "install": "npm run build"
   },
   "repository": {
     "type": "git",
