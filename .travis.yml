@@ -3,7 +3,6 @@ node_js:
   - "node"
 install:
   - npm i
-  - (cd examples; npm i)
 # before_script:
 #   - "export DISPLAY=:99.0"
 #   - "sh -e /etc/init.d/xvfb start"
@@ -14,8 +13,7 @@ script:
   - npm test
   - npm run lint
   - npm run build
-  - cd examples
-  - npm start & npm run cypress
+  - npm start-examples & npm run cypress
 
 deploy:
   provider: npm
