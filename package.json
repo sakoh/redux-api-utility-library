@@ -4,7 +4,7 @@
   "description": "A utility library for handling API Requests and Async Actions with Redux",
   "main": "index.js",
   "scripts": {
-    "test": ".jest --coverage",
+    "test": "jest --coverage",
     "lint": "npm run tslint; npm run eslint",
     "tslint": "tslint -p .",
     "eslint": "eslint -c 'examples/.eslintrc.js' examples/src",
