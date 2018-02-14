@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "redux-api-utility-library": "file:.."
+    "redux-api-utility-library": "file:..",
+    "cypress": "^1.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
