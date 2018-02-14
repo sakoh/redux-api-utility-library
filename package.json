@@ -9,7 +9,6 @@
     "tslint": "node_modules/.bin/tslint -p .",
     "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/src",
     "docs": "node_modules/.bin/typedoc --out ./docs ./src/*/index.ts; touch docs/.nojekyll",
-    "cypress": "./node_modules/.bin/cypress run --record",
     "build": "node_modules/.bin/tsc",
     "prepublishOnly": "npm run build"
   },
