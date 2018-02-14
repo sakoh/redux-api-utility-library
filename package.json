@@ -9,6 +9,7 @@
     "tslint": "node_modules/.bin/tslint -p .",
     "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/src",
     "docs": "node_modules/.bin/typedoc --out ./docs ./src/*/index.ts; touch docs/.nojekyll",
+    "cypress": "./node_modules/.bin/cypress run --record",
     "build": "node_modules/.bin/tsc",
     "prepublishOnly": "npm run build"
   },
@@ -38,7 +39,13 @@
     "react-redux": "^5.0.6",
     "react-router": "^3.2.0",
     "react-router-dom": "^4.2.2",
-    "react-router-redux": "^4.0.8"
+    "react-router-redux": "^4.0.8",
+    "cypress": "^1.4.1",
+    "eslint": "^4.16.0",
+    "history": "^4.7.2",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-scripts": "1.1.0"
   },
   "devDependencies": {
     "@ljharb/eslint-config": "^12.2.1",
