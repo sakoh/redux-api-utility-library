@@ -4,13 +4,15 @@
   "description": "A utility library for handling API Requests and Async Actions with Redux",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest --coverage",
+    "test": ".jest --coverage",
     "lint": "npm run tslint; npm run eslint",
-    "tslint": "node_modules/.bin/tslint -p .",
-    "eslint": "node_modules/.bin/eslint -c 'examples/.eslintrc.js' examples/src",
-    "docs": "node_modules/.bin/typedoc --out ./docs ./src/*/index.ts; touch docs/.nojekyll",
-    "build": "node_modules/.bin/tsc",
-    "install": "npm run build"
+    "tslint": "tslint -p .",
+    "eslint": "eslint -c 'examples/.eslintrc.js' examples/src",
+    "docs": "typedoc --out ./docs ./src/*/index.ts; touch docs/.nojekyll",
+    "build": "tsc",
+    "prepublishOnly": "npm run build",
+    "cypress": "cypress run --record",
+    "start-example": "react-scripts start ./examples"
   },
   "repository": {
     "type": "git",
@@ -36,6 +38,8 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
+    "axios": "^0.17.1",
+    "cypress": "^1.4.1",
     "@ljharb/eslint-config": "^12.2.1",
     "babel-eslint": "^7.2.3",
     "babel-jest": "^22.1.0",
@@ -65,6 +69,7 @@
     "react-router": "^3.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
+    "react-scripts": "1.1.0",
     "ts-jest": "^22.0.1",
     "tslint": "^5.9.1",
     "tslint-config-dollarshaveclub": "^1.0.2",
