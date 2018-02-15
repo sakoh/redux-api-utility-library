@@ -10,7 +10,7 @@ more simple.
 ## Install
 
 ```bash
-npm i --save redux-api-utility-library`
+npm i --save redux-api-utility-library
 ```
 
 ## Higher Order Reducers
