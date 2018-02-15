@@ -7,6 +7,10 @@ Redux API Utility Library (RAUL) is a library of higher order reducers, an API m
 and other utility functions to make building a Redux Application involving asynchronous calls to RESTful APIs
 more simple.
 
+## Install
+
+`npm i --save redux-api-utility-library`
+
 ## Higher Order Reducers
 
 ```js
