@@ -1,1 +1,1 @@
-require('./dist/index.js')
+export * from './dist'

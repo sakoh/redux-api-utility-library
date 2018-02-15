@@ -1,1 +1,1 @@
-import './src/models'
+export * from './src/types'
