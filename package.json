@@ -1,6 +1,6 @@
 {
   "name": "redux-api-utility-library",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility library for handling API Requests and Async Actions with Redux",
   "main": "index.js",
   "scripts": {
