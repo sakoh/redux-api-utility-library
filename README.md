@@ -9,7 +9,7 @@ more simple.
 
 ## Install
 
-```
+```bash
 npm i --save redux-api-utility-library`
 ```
 
