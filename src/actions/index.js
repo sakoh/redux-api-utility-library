@@ -16,7 +16,7 @@ import { createActionTypeFromKey } from '../utils'
  * @return A `RequestAction` which interacts with the API server via `apiMiddleware`.
  */
 export const createRequestAction = (key: string, axiosRequestConfig: AxiosRequestConfig): RequestAction => ({
-  type: createActionTypeFromKey(key, "REQUEST"),
+  type: createActionTypeFromKey(key, 'REQUEST'),
   payload: {
     axiosRequestConfig,
     errorMessage: 'There has been a server request error',

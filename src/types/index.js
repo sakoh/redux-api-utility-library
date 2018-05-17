@@ -13,16 +13,6 @@ export type ActionType =
   | 'ERROR'
 
 /**
- * This enum contains values, which are simply the standard methods types are used to making network requests in web development
- * languages and platforms.
- */
-export type Methods =
-  | 'GET'
-  | 'POST'
-  | 'PUT'
-  | 'DELETE'
-
-/**
  * An error that received by the Redux Store as a result of an unsuccessful network request.
  */
 export type RequestError = {

@@ -20,7 +20,7 @@ type Dispatch = (action: Action) => void
  * @param store the Redux Store that hooks into the middleware.
  */
 export const apiMiddleware = (store: Object = {}) => (next: Dispatch) => async (action: Action) => {
-  const notRequestAction = !action.payload || !action.payload.axiosRequestConfig || !action.payload.key
+  const notRequestAction = !action || !action.payload || !action.payload.axiosRequestConfig || !action.payload.key
 
   if (notRequestAction) {
     return next(action)
