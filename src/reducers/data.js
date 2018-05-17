@@ -6,7 +6,8 @@ import { createActionTypeFromKey } from '../utils'
  * @param key A string value that is used to namespace the action type.
  * @return A reducer that handles actions that dispatched by the `apiMiddleware` after successful server calls.
  */
-export const createDataReducer = (key: string) => (state: object = {}, action: DataAction): object => {
+alias type CreateDataReducer = (key: string) => (state: Object, action: DataAction) => Object
+export const createDataReducer: CreateDataReducer = key => (state = {}, action) => {
   switch (action.type) {
     case createActionTypeFromKey(key, ActionTypes.DATA):
       return action.payload.data

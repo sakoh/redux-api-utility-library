@@ -2,13 +2,10 @@
   "name": "redux-api-utility-library",
   "version": "1.0.4",
   "description": "A utility library for handling API Requests and Async Actions with Redux",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "jest --coverage",
-    "lint": "tslint -p .",
-    "docs": "typedoc --out ./docs ./src/*/index.ts; touch docs/.nojekyll",
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "build": "babel src/ -d lib/",
+    "prepublish": "yarn run build"
   },
   "repository": {
     "type": "git",
@@ -32,12 +29,15 @@
     "redux": "^3.7.2"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-jest": "^22.1.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
     "babel-preset-react": "^6.24.1",
     "domexception": "^1.0.1",
+    "flow-bin": "^0.72.0",
     "jest": "^22.1.3",
     "ts-jest": "^22.0.1",
     "tslint": "^5.9.1",

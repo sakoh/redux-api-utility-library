@@ -1,3 +1,5 @@
+// @flow
+
 import { AxiosRequestConfig } from 'axios'
 import {
   RequestAction,
@@ -29,7 +31,8 @@ export const createRequestAction = (key: string, axiosRequestConfig: AxiosReques
  * @param data The data of a response returned by a successful network request made by the `apiMiddleware`.
  * @return A `DataAction` which changes the state of the Redux Store based off of a successful network request.
  */
-export const createDataAction = (key: string, data: object): DataAction => ({
+type CreateDataAction = (key: string, data: Object) => DataAction
+export const createDataAction: CreateDataAction = (key, data) => ({
   type: createActionTypeFromKey(key, ActionTypes.DATA),
   payload: {
     data,

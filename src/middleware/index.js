@@ -1,3 +1,4 @@
+// @flow
 import { Action, Dispatch } from 'redux'
 import axios, { AxiosResponse } from 'axios'
 import { RequestAction } from '../types'
@@ -12,13 +13,13 @@ import { createErrorAction, createDataAction } from '../actions'
  * @param store the Redux Store that hooks into the middleware.
  */
 export const apiMiddleware = (store: Object = {}) => (next: Dispatch<Action>) => async (action: Action) => {
-  const notRequestAction = !(action as RequestAction).payload || !(action as RequestAction).payload.axiosRequestConfig || !(action as RequestAction).payload.key
+  const notRequestAction = !action.payload || !action.payload.axiosRequestConfig || !action.payload.key
 
   if (notRequestAction) {
     return next(action)
   }
 
-  const { type, payload } = action as RequestAction
+  const { type, payload } = action
   const { axiosRequestConfig, key, errorMessage } = payload
 
   next({ type })

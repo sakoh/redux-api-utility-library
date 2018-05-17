@@ -1,6 +1,0 @@
-{
-  "extends": ["tslint-config-dollarshaveclub/react"],
-  "rules": {
-    "trailing-comma": [true, { "multiline": "always", "singleline": "never" }]
-  }
-}
