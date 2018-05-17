@@ -58,7 +58,7 @@ typings/
 .env
 
 # output
-dist
+lib
 
 # cypress
 examples/cypress/screenshots/

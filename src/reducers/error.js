@@ -1,5 +1,4 @@
 import { 
-  ActionTypes,
   RequestErrorOrNull,
   ErrorAction,
 } from '../types'
@@ -12,9 +11,8 @@ import { createActionTypeFromKey } from '../utils'
  */
 type CreateErrorReducer = (key: string) => (state: RequestErrorOrNull, action: ErrorAction) => RequestErrorOrNull
 export const createErrorReducer: CreateErrorReducer = key => (state = null, action) => {
-
   switch (action.type) {
-    case createActionTypeFromKey(key, ActionTypes.ERROR):
+    case createActionTypeFromKey(key, 'ERR'):
       return action.payload.error
     default:
       return state

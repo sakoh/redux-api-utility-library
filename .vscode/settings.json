@@ -1,5 +1,4 @@
 {
-  "flowide.pathToFlow": "./node_modules/flow-bin",
   "flowide.enabled": true,
   "javascript.validate.enable": false,
 }

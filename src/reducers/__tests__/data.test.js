@@ -14,7 +14,7 @@ describe('createReducer/data', () => {
       name: 'hello',
     }
     const action: DataAction = {
-      type: createActionTypeFromKey('hello', ActionTypes.DATA),
+      type: createActionTypeFromKey('hello', ),
       payload: { data },
     }
     const result = createDataReducer('hello')({}, action)

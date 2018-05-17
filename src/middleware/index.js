@@ -1,8 +1,15 @@
 // @flow
-import { Action, Dispatch } from 'redux'
 import axios, { AxiosResponse } from 'axios'
-import { RequestAction } from '../types'
+import {
+  DataAction,
+  ErrorAction,
+  RequestAction,
+  SimpleAction,
+} from '../types'
 import { createErrorAction, createDataAction } from '../actions'
+
+type Action = DataAction | ErrorAction | RequestAction | SimpleAction
+type Dispatch = (action: Action) => void
 
 /**
  * A middleware that handles server requests, processing and changing actions according to the keys in its
@@ -12,7 +19,7 @@ import { createErrorAction, createDataAction } from '../actions'
  * request fails.
  * @param store the Redux Store that hooks into the middleware.
  */
-export const apiMiddleware = (store: Object = {}) => (next: Dispatch<Action>) => async (action: Action) => {
+export const apiMiddleware = (store: Object = {}) => (next: Dispatch) => async (action: Action) => {
   const notRequestAction = !action.payload || !action.payload.axiosRequestConfig || !action.payload.key
 
   if (notRequestAction) {
